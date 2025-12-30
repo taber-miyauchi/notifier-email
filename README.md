@@ -32,9 +32,16 @@ Email implementation of the `Notifier` interface from `notifier-core`.
 
 - `github.com/sourcegraph-ce/notifier-core` - For `Notifier` interface and `Message` type
 
-## Precise Code Navigation Demo
+## Testing Precise Code Navigation
 
-This repo **implements** the `Notifier` interface. Try these:
+Open this repo in Sourcegraph and try:
 
-1. **"Find Implementations"** on `Notifier` in `notifier-core` → lands on `EmailNotifier.Send()`
-2. **"Go to Definition"** on `core.Message` → jumps to `notifier-core/message.go`
+### 1. Go to Definition (cross-repo)
+
+- In `email.go`, click on `core.Message` (line 27) → **Go to Definition**
+- → Jumps to `Message` struct in `notifier-core/message.go`
+
+### 2. Find References (cross-repo)
+
+- In `email.go`, click on `EmailNotifier` (line 11) → **Find References**
+- → Shows usage in `notifier-service/main.go`
