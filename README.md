@@ -36,12 +36,20 @@ Email implementation of the `Notifier` interface from `notifier-core`.
 
 Open this repo in Sourcegraph and try the following:
 
-### 1. Go to Definition (cross-repo)
+### 1. Go to Definition (cross-repo type)
 
-- In `email.go`, click on `core.Message` (line 28) → **Go to Definition**
-- → Jumps to `Message` struct in `notifier-core/message.go`
+Jump from a type usage to its definition in another repository.
 
-### 2. Find References (cross-repo)
+- In `email.go`, click on `Message` (line 28) → **Go to Definition**
+- → Highlights `Message` struct (line 13) in `notifier-core/message.go`
 
-- In `email.go`, click on `EmailNotifier` (line 11) → **Find References**
-- → Shows usage in `notifier-service/main.go`
+**Benefit:** Navigate directly from your implementation to the shared types you depend on—understand the contract without leaving your editor or manually searching another repo.
+
+### 2. Find References (cross-repo function)
+
+Locate all usages of an exported function across repository boundaries.
+
+- In `email.go`, click on `NewEmailNotifier` function (line 18) → **Find References**
+- → Highlights `NewEmailNotifier` (line 13) in `notifier-service/main.go`
+
+**Benefit:** See exactly which services consume your implementation—essential for gauging adoption and planning breaking changes to your API.
