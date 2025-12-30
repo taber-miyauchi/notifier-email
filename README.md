@@ -34,11 +34,11 @@ Email implementation of the `Notifier` interface from `notifier-core`.
 
 ## Testing Precise Code Navigation
 
-Open this repo in Sourcegraph and try:
+Open this repo in Sourcegraph and try the following:
 
 ### 1. Go to Definition (cross-repo)
 
-- In `email.go`, click on `core.Message` (line 27) → **Go to Definition**
+- In `email.go`, click on `core.Message` (line 28) → **Go to Definition**
 - → Jumps to `Message` struct in `notifier-core/message.go`
 
 ### 2. Find References (cross-repo)
